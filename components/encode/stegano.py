@@ -101,6 +101,9 @@ def stegano_encode():
     im = Image.open(im_path)
 
     f= im.format
+    if not(f=='PNG'):
+    	print(bc.FAIL+"Only PNG....  Exiting"+bc.ENDC)
+    	return
     fn, fext= os.path.splitext(im_path)
     
     #Comparing image size(pixels) and message length(characters) [no. of pixels >= no. of characters]
