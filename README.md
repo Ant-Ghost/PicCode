@@ -1,4 +1,4 @@
-#PicCode#
+# PicCode #
 
 This program hides/unhides your text, which is in a picture.
 
@@ -6,7 +6,7 @@ This program hides/unhides your text, which is in a picture.
 
 **HASH (#)** *NOT ALLOWED8*
 
-##Windows##
+## Windows ##
 
 To run, double click on `run.bat` or simply write `run.bat` on your terminal.
 
@@ -18,7 +18,7 @@ Windows basic `cmd` and basic `powershell` has disabled it by default.
 
 If want to see coloured text, download latest `Windows Terminal` from Microsoft store (free of cost).
 
-##Linux / MacOS##
+## Linux / MacOS ##
 
 To run, double click on `run.sh` or simply write `./run.sh`  on your terminal
 
