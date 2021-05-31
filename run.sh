@@ -1,6 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
-
-
-$PWD/py/python.exe PicCode.py
+python3 PicCode.py
 
