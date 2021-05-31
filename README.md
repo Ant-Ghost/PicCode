@@ -22,6 +22,9 @@ If want to see coloured text, download latest `Windows Terminal` from Microsoft 
 
 To run, double click on `run.sh` or simply write `./run.sh`  on your terminal
 
+You must have python3+(with `pip`) on your computer.
+
+
 `<-[93m` - This is an example of ANSI escape code, helps in colouring the texts.
 
 If you see the above notation, that means ANSI escape code is disabled in your terminal.
