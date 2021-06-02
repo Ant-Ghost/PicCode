@@ -64,3 +64,5 @@ Press 2, for Unhide a hidden message
 
 if __name__ == '__main__':
     main()
+
+print("\n\n"+bc.OKBLUE+"Follow:"+bc.ENDC,end=' ')

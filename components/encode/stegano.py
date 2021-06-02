@@ -33,17 +33,18 @@ def encode(im, msg):
                 return
 
             
-            #pixel_arr=msg_to_bytes(pixels_list[index_p])
-            r,g,b,a =msg_to_bytes(pixels_list[index_p])
+            pixel_arr=msg_to_bytes(pixels_list[index_p])
+            #r,g,b,a =msg_to_bytes(pixels_list[index_p])
             index_p+=1
             
             
-            '''
+            
             for x in range(0,len(pixel_arr)):
                 
                 if index_msg<len(bytes_msg):
-                    pixel_arr[x]=int((pixel_arr[x][:-1]+bytes_msg[index_msg]),2)
+                    pixel_arr[x]=pixel_arr[x][:-1]+bytes_msg[index_msg]
                     index_msg+=1
+                pixel_arr[x]=int(pixel_arr[x],2)
             pixels[j,i]=tuple(pixel_arr)
             '''
             
@@ -64,7 +65,7 @@ def encode(im, msg):
                 index_msg+=1
             
             pixels[j,i] = (r,g,b,a)
-            
+            '''
             #input()
 
 
@@ -75,7 +76,7 @@ def stegano_encode():
     #Input Message and its Checking
     while True:
         print(bc.WARNING+"Your message must not contain hash(#)"+bc.ENDC+bc.ENDC)
-        print(bc.WARNING+"4 character will be padded to the given message"+bc.ENDC+bc.ENDC)
+        print(bc.WARNING+"8 character will be padded to the given message"+bc.ENDC+bc.ENDC)
         secret_message=input("Enter your message: ")
 
         print("Checking validity of your messsage....", end='')
@@ -86,7 +87,6 @@ def stegano_encode():
             break
     secret_message="####"+secret_message+"####"
     
-   
    #Input Image path and its Checking
     while True:
         im_path=input("Enter path of image: ")
@@ -101,9 +101,14 @@ def stegano_encode():
     im = Image.open(im_path)
 
     f= im.format
-    if not(f=='PNG'):
-    	print(bc.FAIL+"Only PNG....  Exiting"+bc.ENDC)
-    	return
+    if f=='JPEG':
+        print(bc.FAIL+"JPEG not allowed .... Exiting"+bc.ENDC)
+        return
+
+    if not (im.mode=='RGB' or im.mode=='RGBA'):
+        print(bc.FAIL+"Only RGB or RGBA modes supported..... Exiting"+bc.ENDC)
+        return
+
     fn, fext= os.path.splitext(im_path)
     
     #Comparing image size(pixels) and message length(characters) [no. of pixels >= no. of characters]

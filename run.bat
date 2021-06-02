@@ -7,3 +7,5 @@ cls
 py PicCode.py
 
 pause
+
+cls

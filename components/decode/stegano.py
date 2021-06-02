@@ -36,6 +36,7 @@ def decode(im):
     bytes_decode=''
     while True:
         pixel_tuple= pixels_list[index]
+        index+=1
                 
         for i in range(0,len(pixel_tuple)):
             bytes_decode+= str(pixel_tuple[i]&1)
@@ -54,7 +55,7 @@ def decode(im):
         if len(bytes_decode)>=8*4 and len(bytes_decode)%8==0 and decideAndShow(bytes_decode):
                 return
         '''
-        index+=1
+        
 
 
 
