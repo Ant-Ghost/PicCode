@@ -20,6 +20,7 @@ then
     sudo apt-get uninstall -y python3-pip
 fi
 
+echo -e "\n\n***WARNING***\n"
 echo -e "Do you want to remove python3?(y/n)"
 
 read -n 1
