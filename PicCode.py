@@ -1,5 +1,6 @@
 from PIL import Image
 import os, sys
+sys.path.append(".")
 from additions.colours import bcolors as bc
 from components.encode import stegano as en
 from components.decode import stegano as dec
