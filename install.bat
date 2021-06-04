@@ -34,6 +34,7 @@ echo Downloading Pillow
 
 echo Making run.bat
 (echo @echo off
+echo .\additions\x64\ansicon.exe -p
 echo cls
 echo .\env1\python.exe PicCode.py
 echo pause
@@ -49,7 +50,7 @@ echo call :deleteSelf^&exit /b
 echo :deleteSelf
 echo start /b ^"^" cmd /c del ^"%%~f0^"^&exit /b) > uninstall.bat
 echo.
-echo run.bat will start your program ..... please use Windows Terminal(from Microsoft Store) to see colourful text
+echo run.bat will start your program
 echo.
 echo Installation done
 echo.
