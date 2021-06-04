@@ -102,12 +102,11 @@ def stegano_encode():
 
     f= im.format
     if f=='JPEG':
-        print(bc.FAIL+"JPEG not allowed .... Exiting"+bc.ENDC)
-        return
+        f = 'PNG'
 
-    if not (im.mode=='RGB' or im.mode=='RGBA'):
-        print(bc.FAIL+"Only RGB or RGBA modes supported..... Exiting"+bc.ENDC)
-        return
+    #if not (im.mode=='RGB' or im.mode=='RGBA'):
+    #    print(bc.FAIL+"Only RGB or RGBA modes supported..... Exiting"+bc.ENDC)
+    #    return
 
     fn, fext= os.path.splitext(im_path)
     
