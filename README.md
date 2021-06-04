@@ -43,4 +43,4 @@ If you see the above notation, that means ANSI escape code is disabled in your t
 
 To uninstall, either delete the folder or double click `uninstall.sh`. It only removes the prerequistes(downloaded during installation) from your computer.
 
-*While installation, the `install.sh` creates `additions/installed.txt` to keep a record of prequisites downloaded. During uninstallation, `uninstall.sh` used `additions/installed.txt` to remove the prerequisites(downloaded during installation). You may edit `additions/installed.txt` to keep your desired package.*
+*While installation, the `install.sh` creates `additions/installed.txt` to keep a record of prequisites downloaded. During uninstallation, `uninstall.sh` use `additions/installed.txt` to remove the prerequisites(downloaded during installation). You may edit `additions/installed.txt` to keep your desired package.*
