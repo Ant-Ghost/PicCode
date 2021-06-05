@@ -21,11 +21,7 @@ echo Unzipping env1.zip as env1
 setlocal
 cd /d %~dp0
 set a=%cd%
-echo %a%
-pause
 Call :UnZipFile "%a%\env1\" "%a%\env1.zip\"
-
-
 del /F /Q env1.zip
 
 echo Downloading get-pip

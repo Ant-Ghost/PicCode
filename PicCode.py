@@ -39,8 +39,8 @@ This is program that lets you hide text in a picture. It also unhides any hidden
 
     menu='''
 \n\n
-Press 1, for Hiding a message.
-Press 2, for Unhide a hidden message
+Press 1, to Hidw a message.
+Press 2, to Unhide a hidden message
     '''
 
     print(bc.OKCYAN+menu+bc.ENDC)
