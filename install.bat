@@ -13,12 +13,20 @@ if "%internet%" == "Not connected to internet" (
 	exit /B
 	)
 
-echo Downloading python as epthon.zip
-curl https://www.python.org/ftp/python/3.9.5/python-3.9.5-embed-amd64.zip > epython.zip
+echo Downloading python as env1.zip
+curl https://www.python.org/ftp/python/3.9.5/python-3.9.5-embed-amd64.zip > env1.zip
 
-echo Unzipping epython.zip as py
-unzip -o epython.zip -d env1
-del /F /Q epython.zip
+echo Unzipping env1.zip as env1
+
+setlocal
+cd /d %~dp0
+set a=%cd%
+echo %a%
+pause
+Call :UnZipFile "%a%\env1\" "%a%\env1.zip\"
+
+
+del /F /Q env1.zip
 
 echo Downloading get-pip
 curl -L https://bootstrap.pypa.io/get-pip.py>env1/get-pip.py
@@ -56,3 +64,19 @@ echo Installation done
 echo.
 pause
 cls
+
+:UnZipFile <ExtractTo> <newzipfile>
+set vbs="%temp%\_.vbs"
+if exist %vbs% del /f /q %vbs%
+>%vbs%  echo Set fso = CreateObject("Scripting.FileSystemObject")
+>>%vbs% echo If NOT fso.FolderExists(%1) Then
+>>%vbs% echo fso.CreateFolder(%1)
+>>%vbs% echo End If
+>>%vbs% echo set objShell = CreateObject("Shell.Application")
+>>%vbs% echo set FilesInZip=objShell.NameSpace(%2).items
+>>%vbs% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
+>>%vbs% echo Set fso = Nothing
+>>%vbs% echo Set objShell = Nothing
+cscript //nologo %vbs%
+if exist %vbs% del /f /q %vbs%
+
