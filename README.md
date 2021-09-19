@@ -1,6 +1,6 @@
 # PicCode #
 
-This program hides/unhides your text, which is in a picture.
+This program hides your text inside an innocent picture.
 
 **HASH (#)** *NOT ALLOWED*
 
@@ -36,3 +36,8 @@ To run, double click on `run.sh` or simply write `./run.sh`  on your terminal
 To uninstall, either delete the folder or double click `uninstall.sh`. It only removes the prerequistes(downloaded during installation) from your computer.
 
 *While installation, the `install.sh` creates `additions/installed.txt` to keep a record of prequisites downloaded. During uninstallation, `uninstall.sh` use `additions/installed.txt` to remove the prerequisites(downloaded during installation). You may edit `additions/installed.txt` to keep your desired packages.*
+
+
+### SAD NEWS ###
+
+`cmd` doesnt supports ANSI escape codes, which means characters cannot not be coloured. To solve that I used ansicon.exe ... but most antiviruses treat like a virus as it kind of rewrites your virtual memory. To use it deactivate your antivirus or download a terminal which can support ANSI escape codes (eg. windows terminal). 
