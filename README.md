@@ -8,7 +8,7 @@ This program hides your text inside an innocent picture.
 
 To install, double click on `install.bat` or simply write `install.bat` on your cmd.
 
-**Please keep be online while installing as the program need to download few prerequisites.**
+**Please be online while installing as the program need to download few prerequisites.**
 
 
 
@@ -24,9 +24,9 @@ To uninstall, either delete the folder or double click `uninstall.bat`. It only 
 
 ## Linux / MacOS ##
 
-To install, double click on `install.sh` or simply write `install.sh` on your cmd.
+To install, double click on `install.sh` or simply write `./install.sh` on your cmd.
 
-**Please keep be online while installing as the program need to download few prerequisites.**
+**Please be online while installing as the program need to download few prerequisites.**
 
 
 
